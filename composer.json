@@ -1,6 +1,6 @@
 {
   "name": "modava/contact",
-  "description": "Test cai gi do",
+  "description": "Contact Modava",
   "keywords": [
     "yii2",
     "helper"
@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "modava\\auth\\": "src"
+      "modava\\contact\\": "src"
     }
   },
   "minimum-stability": "dev"

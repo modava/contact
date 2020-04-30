@@ -16,7 +16,7 @@ php composer.phar require --prefer-dist "modava/contact @dev"
 or add
 
 ```
-"modava/auth": "@contact"
+"modava/contact": "@dev"
 ```
 
 to the require section of your `composer.json` file.
