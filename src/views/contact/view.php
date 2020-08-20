@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						'email:email',
 						'address',
 						'title',
-						'content:ntext',
+						'content:html',
 						'ip_address',
                         [
                             'attribute' => 'status',
@@ -61,15 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return Yii::$app->getModule('contact')->params['status'][$model->status];
                             }
                         ],
-						'created_at',
-                        [
-                            'attribute' => 'userCreated.userProfile.fullname',
-                            'label' => ContactModule::t('contact', 'Created By')
-                        ],
-                        [
-                            'attribute' => 'userUpdated.userProfile.fullname',
-                            'label' => ContactModule::t('contact', 'Updated By')
-                        ],
+						'created_at:datetime',x
                     ],
                 ]) ?>
             </section>
