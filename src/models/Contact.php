@@ -131,7 +131,7 @@ class Contact extends ContactTable
         return [
             [['fullname', 'phone'], 'required'],
             [['content'], 'string'],
-            [['status', 'created_at'], 'integer'],
+            [['status', 'type', 'created_at'], 'integer'],
             [['fullname', 'email', 'address', 'title', 'ip_address'], 'string', 'max' => 255],
             [['phone'], 'string', 'max' => 25],
             [['phone'], 'unique'],
@@ -156,6 +156,7 @@ class Contact extends ContactTable
             'content' => Yii::t('backend', 'Content'),
             'ip_address' => Yii::t('backend', 'Ip Address'),
             'status' => Yii::t('backend', 'Status'),
+            'type' => Yii::t('backend', 'Type'),
             'category_id' => Yii::t('backend', 'Category'),
             'created_at' => Yii::t('backend', 'Created At'),
         ];
