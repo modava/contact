@@ -2,12 +2,11 @@
 
 namespace modava\contact\models\table;
 
-use cheatsheet\Time;
+use backend\components\MyModel;
 use modava\contact\models\query\ContactCategoryQuery;
 use Yii;
-use yii\db\ActiveRecord;
 
-class ContactCategoryTable extends \yii\db\ActiveRecord
+class ContactCategoryTable extends MyModel
 {
     const STATUS_DISABLED = 0;
     const STATUS_PUBLISHED = 1;

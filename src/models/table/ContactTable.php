@@ -2,10 +2,10 @@
 
 namespace modava\contact\models\table;
 
+use backend\components\MyModel;
 use modava\contact\models\query\ContactQuery;
-use yii\db\ActiveRecord;
 
-class ContactTable extends ActiveRecord
+class ContactTable extends MyModel
 {
     const STATUS_DISABLED = 0;
     const STATUS_PUBLISHED = 1;
