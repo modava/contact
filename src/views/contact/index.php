@@ -111,23 +111,28 @@ try {
                                                 'attribute' => 'title',
                                                 'format' => 'raw',
                                                 'value' => function ($model) {
-                                                    return Html::a($model->title, ['view', 'id' => $model->id], [
-                                                        'title' => $model->title,
-                                                        'data-pjax' => 0,
-                                                    ]);
+                                                    $title = $model->title;
+                                                    if ($title == null)
+                                                        $title = 'Liên hệ';
+                                                    return Html::a($title, ['view', 'id' => $model->id], [
+                                                            'title' => $model->title,
+                                                            'data-pjax' => 0,
+                                                        ]) . '</br>Địa chỉ: ' . $model->address .
+                                                        '</br>Danh mục: ' . $model->contactCategory->title;
                                                 }
                                             ],
-                                            'fullname',
-                                            'phone',
-                                            'email',
-                                            'address',
-                                            'content:html',
                                             [
-                                                'attribute' => 'Category',
-                                                'label' => 'Danh mục',
-                                                'value' => 'contactCategory.title',
+                                                'attribute' => 'fullname',
+                                                'label' => 'Thông tin',
+                                                'format' => 'raw',
+                                                'value' => function ($model) {
+                                                    return 'Họ tên: ' . $model->fullname .
+                                                        '</br>Số điện thoại: ' . $model->phone .
+                                                        '</br>Email: ' . $model->email.
+                                                        '</br>IP: ' . $model->ip_address;
+                                                }
                                             ],
-                                            'ip_address',
+                                            'content:html',
                                         ], $contactMetadataIndex)
                                     ]); ?>
                                 </div>
