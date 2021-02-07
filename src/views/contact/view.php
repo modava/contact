@@ -59,7 +59,7 @@ try {
                             'attribute' => 'contactCategory.title',
                         ],
                         'created_at:datetime',
-                    ], $model->contactMetadataView),
+                    ], $model->contactMetadataView  ?: []),
                 ]) ?>
             </section>
         </div>
