@@ -118,7 +118,8 @@ try {
                                                             'title' => $model->title,
                                                             'data-pjax' => 0,
                                                         ]) . '</br>Địa chỉ: ' . $model->address .
-                                                        '</br>Danh mục: ' . $model->contactCategory->title;
+                                                        '</br>Danh mục: ' . $model->contactCategory->title.
+                                                        '</br>Thời gian: ' . date('d-m-Y', $model->created_at);
                                                 }
                                             ],
                                             [
