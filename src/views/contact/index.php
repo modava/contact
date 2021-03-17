@@ -118,7 +118,7 @@ try {
                                                             'title' => $model->title,
                                                             'data-pjax' => 0,
                                                         ]) . '</br>Địa chỉ: ' . $model->address .
-                                                        '</br>Danh mục: ' . $model->contactCategory->title.
+                                                        '</br>Danh mục: ' . isset($model->contactCategory) && $model->contactCategory != null ? $model->contactCategory->title : ''.
                                                         '</br>Thời gian: ' . date('d-m-Y', $model->created_at);
                                                 }
                                             ],
